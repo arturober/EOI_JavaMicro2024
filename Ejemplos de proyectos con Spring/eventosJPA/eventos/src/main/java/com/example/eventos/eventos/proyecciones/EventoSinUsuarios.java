@@ -8,4 +8,5 @@ public interface EventoSinUsuarios {
     String getDescripcion();
     double getPrecio();
     LocalDate getFecha();
+    int getCountUsuarios();
 }

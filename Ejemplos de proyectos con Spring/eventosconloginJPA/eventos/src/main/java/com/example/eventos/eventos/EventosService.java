@@ -62,7 +62,7 @@ public class EventosService {
 
     public void asistirEvento(int idEvento) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        Integer idAuth = Integer.parseInt(auth.getCredentials().toString());
+        Integer idAuth = (Integer)auth.getCredentials();
 
         Usuario usuario = usuariosRepository.findById(idAuth).get();
 
