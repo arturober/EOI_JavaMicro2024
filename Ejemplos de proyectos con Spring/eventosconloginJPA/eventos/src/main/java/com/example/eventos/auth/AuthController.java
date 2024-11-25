@@ -50,6 +50,7 @@ public class AuthController {
         String token = JWT.create()
                 .withIssuer("arturober")
                 .withClaim("id", user.getId())
+                .withSubject(String.valueOf(user.getId()))
                 .withIssuedAt(new Date(System.currentTimeMillis()))
                 .withExpiresAt(new Date(System.currentTimeMillis() + (7 * 24 * 60 * 60 * 1000))) // Caduca en una semana
                 .sign(algorithm);
